@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,300&display=swap');
+
+/*Principals modification*/
+    html{
+        font-family: 'Raleway', sans-serif;
+    }
+
+    /*Variables*/
+    :root{
+        --bgColor1: #F2F2F2;
+        --borderColor1: #d9d9d9;
+        --bgColor2: #DEEBFF;
+        --bgColor3: #f3f8ff;
+        --darkBlue: #0065FC;
+        --blackShadow: #0000002e;
+    }
+
+    @media all and (max-width: 802px){
+        html{
+            font-family: 'Raleway', sans-serif;
+        }
+        #main{
+            margin: 0;
+        }
+    }
+/* End of Principal modification*/
+
+/*Header*/
+    .header{
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .headerLogo{
+        margin-right: auto;
+        padding: 0 3rem;
+    }
+    .headerNavBar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .navBarLink{
+        text-decoration: none;
+        color: black;
+        border-top: 3px solid transparent;
+        padding: 2rem 3rem;
+    }
+    .navBarLink[data-active="true"]{
+        color: var(--darkBlue);
+        border-top: 3px var(--darkBlue) solid;   
+    }
+    .navBarLink:hover{
+        color: var(--darkBlue);
+        border-top: 3px var(--darkBlue) solid;
+    }
+    .headerSignupLink{
+        color: var(--darkBlue);
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 2rem 3rem;
+    }
+
+
+    @media all and (max-width: 802px){
+        .headerNavBar{
+            order: 1;
+            flex-basis: 100%;
+        }
+        .headerLogo{
+            padding: 0 1rem;
+        }
+        .navBarLink{
+            width: 50%;
+            text-align: center;
+            border-bottom: 3px var(--borderColor1) solid;
+            border-top: none;
+            padding: 1rem 0;
+        }
+        .navBarLink:hover{
+            border-bottom: 3px var(--darkBlue) solid;
+            border-top: none;
+        }
+        .navBarLink[data-active="true"]{
+            border-top: none;
+            color: var(--darkBlue);
+            border-bottom: 3px var(--darkBlue) solid;
+        }
+        .headerSignupLink{
+            padding-right: 2rem;
+        }
+    }
+/*End of the header*/
+
+/*Section of the searching*/
+    .searchingSection{
+        margin-bottom: 1rem;
+        padding: 0 3rem;
+    }
+    .searchingSection h2{
+        margin-bottom: 0px;
+    }
+    .seachBar{
+        display: inline-flex;
+        font-size: 1em;
+        max-width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .subSearchLocation{
+        background: var(--bgColor1);
+        display: flex;
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem 0rem 0rem 1rem;
+        cursor: pointer;
+    }
+    .subSearchIcon{
+        padding: 1rem 1.2rem;
+    }
+    .subSeachInput{
+        border: var(--borderColor1) 1px solid;
+        height: 3rem;
+        font-weight: bold;
+        padding: 0 0 0 1rem;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+    }
+    .subSeachSubmit{
+        font-family: 'Raleway', sans-serif;
+        height: 3rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0rem 1rem 1rem 0rem;
+        background-color: rgb(0, 101, 252);
+        cursor: pointer;
+        border: none;
+    }
+    .textButton{
+        color: white;
+        font-size: 1.3em;
+        font-weight: bold;
+        background-color: rgb(0, 101, 252);
+        border: none;
+    }
+    .iconButton{
+        display: none;
+    }
+
+
+    @media all and (max-width: 502px){
+        .searchingSection{
+            padding: 0 1rem;
+        }
+        .subSeach1{
+            padding: 0 0.5rem;
+        }
+        .subSeachSubmit{
+            border-radius: 1rem;
+            margin-left: -1rem;
+        }
+        .textButton{
+            display: none;
+        }
+        .iconButton{
+            display: block;
+            color: white;
+            font-size: 1rem;
+        }
+    }
+/*End of section of the searching*/
+
+/*Section of the filters*/
+    .filters{
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 3rem;
+        margin-bottom: 1rem;
+    }
+    .filterLink{
+        text-decoration: none;
+        color: black;
+        transition:  transform 30ms;
+    }
+    .filterLink:hover{
+        text-decoration: none;
+        color: black;
+        transform: scale(1.015);
+    }
+    .filter{
+        border: black solid 1px;
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        border: var(--borderColor1) solid 2px;
+        height: 3rem;
+        border-radius: 2rem;
+        align-items: center;
+    }
+    .filter h4{
+        padding: 1rem;
+    }
+    .filter:hover{
+        background: var(--bgColor3);
+    }
+    .filterIcon{
+        background: var(--bgColor2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-left: -8px;
+        width: 3.3rem;
+        height: 3.2rem;
+    }
+    .filterIconColor{
+        color: blue;
+    }
+    @media all and (max-width: 702px){
+        .filters{
+            gap: 1rem;
+        }
+        .filterTitle{
+            margin-right: 100%; 
+        }
+    }
+/*End of section of the filters*/
+
+/*section of information*/
+.informationSection{
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    margin-bottom: 1rem;
+}
+.informationSection p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+.informationSection .fa-info{
+    border: var(--bgColor1) solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    color: blue;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+/*End of section of information*/
+
+/*Section des hebergements*/
+.sectionHebergement{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 3rem;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.hebergement{
+    background: var(--bgColor1);
+    border-radius: 2rem;
+    flex: 2;
+    padding: 2rem;
+}
+.hebergementCards{
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 2rem;
+   margin-bottom: 2rem;
+}
+.hebergementCard{
+    background: white;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem var(--blackShadow);
+    transition: transform 30ms;
+}
+.hebergementCard:hover{
+    transform: scale(1.015);
+}
+.hebergementCardImg{
+    height: 8rem;
+}
+.hebergementCardImg img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0rem;
+    object-fit: cover;
+}
+.hebergementCardText{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 1rem 1rem;
+}
+.hebergementCardTextTitle{
+    margin: 0px;
+    padding: 0.3rem 1rem;
+}
+.hebergementCardText p{
+    margin: 0px;
+    padding: 0 1rem; 
+}
+.hebergementCardsLink{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+.popular{
+    background: var(--bgColor1);
+    border-radius: 2rem;
+    flex: 1;
+    padding: 1rem 2rem;
+}
+.popular_text{
+    padding-bottom: 1rem;
+}
+.popularTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chartIcon{
+    font-size: 1.5rem;
+}
+.popularCards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.popularCard{
+    background: white;
+    display: flex;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 2px var(--bgColor1);
+    text-decoration: none;
+    color: black;
+    transition: transform 30ms;
+}
+.popularCard:hover{
+    transform: scale(1.015);
+}
+.popularCardImg{
+    height: 9rem;
+    flex: 1;
+}
+.popularCardImg img{
+    border-radius: 1rem 0 0 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popularCardText{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    padding: 0.3rem;
+}
+.popularCardTextTitle{
+    margin: 0px;
+    padding: 0.5rem 1rem;
+}
+.popularCardText p{
+    margin: 0px;
+    padding: 0 1rem 2rem 1rem;
+}
+.stars{
+    padding: 0.3rem 1rem;
+}
+.stars-empty{
+    color: rgb(226, 221, 221);
+    font-weight: bolder;
+}
+.stars-full{
+    color: var(--darkBlue);
+}
+
+@media all and (max-width: 1200px){
+    .sectionHebergement{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+    .popular{
+        order: 0;
+    }
+    .hebergement{
+        order: 1;
+    }
+    .popularCards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media all and (max-width: 1002px){
+    .popular{
+        border-radius: 0px;
+        padding: 2rem 1rem;
+    }
+    .hebergement{
+        background: white;
+        border-radius: 0px;
+        padding: 1rem;
+    }
+    .hebergementCards{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .popularCardImg{
+        flex-basis: 39%;
+    }
+    .popularCardText{
+        flex-basis: 60%;
+    }
+    .popularCards{
+        gap: 1rem;
+    }
+}
+
+@media all and (max-width: 1050px){
+    .sectionHebergement{
+        padding: 0;
+    }
+    .hebergementCards{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr ;
+        gap: 2rem;
+    }
+    .popularCards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media all and (max-width: 600px){
+    .hebergementCards{
+        grid-template-columns: 1fr;
+    }
+}
+/*End of section des hebergements*/
+
+/* Section of activities */
+.sectionActivity{
+    padding: 0 3rem;
+    margin-bottom: 4rem;
+}
+.activitycards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-height(10rem) 1fr);
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
+.activityCardImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+.activityCardTitle{
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0rem 0rem 5rem var(--blackShadow);
+}
+.activityCard:hover{
+    transform: scale(1.015);
+}
+.activityCard{
+    text-decoration: none;
+    color: black;
+    border-radius: 1rem;
+}
+@media all and (min-width: 1300px){
+    .activityCard1{
+        grid-row: 1/3;
+    }
+    .activityCard2{
+        height: 8rem;
+        grid-row: 1/1;
+        grid-column: 2/2;
+        box-shadow: 0rem 0rem 5rem var(--blackShadow);
+    }
+    .activityCard3{
+        align-self: self-end;
+        grid-column: 2/2;
+        grid-row: 2/2;
+    }
+    .activityCard4{
+        grid-column: 3/3;
+        grid-row: 1/3;
+    }
+    .activityCard5{
+        grid-column: 4/4;
+        grid-row: 1/1;
+    }
+    .activityCard6{
+        align-self: flex-end;
+        grid-column: 4/4;
+        grid-row: 2/2;
+    }
+    .bigActivityImg{
+        height: 30rem;
+    }
+    .thinnerActivityImg{
+        height: 14rem;
+    }
+    .thinnestActivityImg{
+        height: 10rem;
+    }
+}
+
+@media all and (max-width: 1300px){
+    .sectionActivity{
+        padding: 0 3rem;
+    }
+    .activitycards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-basis: 100%;
+    }
+    .activityCard{
+        width: 31%;
+        box-shadow: 0rem 0rem 5rem whitesmoke;
+    }
+    .bigActivityImg, .thinnerActivityImg, .thinnestActivityImg{
+        height: 10rem;
+    }
+}
+
+@media all and (max-width: 1025px){
+    .sectionActivity{
+        padding: 0 1rem;
+    }
+    .activityCard{
+        flex-basis: 47%;
+        gap: 0rem 3rem;
+    }
+}
+
+@media all and (max-width: 600px){
+    .activityCard{
+        flex-basis: 100%;
+    }
+}
+
+/* Footer */
+.footer{
+    background: var(--bgColor1);
+    max-width: 100%;
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.footerColumList{
+    padding-left: 0;
+}
+.footerColumList li{
+    list-style-type: none;
+    padding-bottom: 1rem;
+}
+.footerColumLink{
+    color: black;
+    text-decoration: none;
+}
+.footerColumLink:hover{
+    text-decoration: underline;
+}
+.footerColum{
+    margin-right: 15rem;
+}
+
+@media all and (max-width: 852px){
+    .footerColum{
+        margin-right: 3rem;
+    }
+}
+
+@media all and (max-width: 720px){
+    .footer{
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+}
