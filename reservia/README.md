@@ -3,8 +3,10 @@
 Dans ce projet, nous allons implémenter une maquette d'un site d'hébergement pour une entreprise
 nommé **Réservia** en version mobile et destop. Les deux maquettes se trouvent dans un le dossier 
 Tools dans le sous dossier disign.
-[Maquette desktop](tools/design/desktop.png)
-[Maquette mobile](tools/design/desktop.png)
+- ![Maquette desktop](tools/design/desktop.png)
+Maquette desktop
+- ![Maquette mobile](tools/design/desktop.png)
+Maquette mobile
 
 ## Technologies
 - HTML
