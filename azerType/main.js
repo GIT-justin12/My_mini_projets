@@ -1,0 +1,5 @@
+/**
+ * Jeu de saisir.
+ */
+
+startGame()
