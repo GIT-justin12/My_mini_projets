@@ -1,5 +1,0 @@
-/**
- * Jeu de saisir.
- */
-
-startGame()
