@@ -1,0 +1,382 @@
+/* Styles */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/* Pincipals */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 7rem;
+}
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
+
+h2 {
+  margin: 0;
+  padding: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  font-family: "shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.3rem;
+  position: relative;
+}
+
+/* Ville */
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  padding: 1rem;
+}
+.city i {
+  font-size: 1.5rem;
+}
+
+/* Explorer */
+.explorer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.explorer h2 {
+  font-size: 1.5rem;
+}
+.explorer p {
+  size: 1rem;
+}
+.explorer button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 8px -3px #000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: transform 200ms;
+  margin-top: 2rem;
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.tuto {
+  counter-reset: steps;
+  margin-bottom: 2rem;
+}
+.tuto h2 {
+  margin-bottom: 1rem;
+}
+.tuto ol {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .tuto ol {
+    flex-direction: column;
+  }
+}
+.tuto li {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  list-style-type: none;
+  flex-grow: 1;
+  box-shadow: 2px 1px 8px -3px #000;
+}
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  display: grid;
+  background: #9356dc;
+  position: absolute;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  bottom: 50%;
+  left: -1rem;
+  transform: translateY(50%);
+}
+.tuto li:hover {
+  transform: scale(1.02);
+}
+.tuto li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
+}
+
+#homePage .menus {
+  background: #f6f6f6;
+  margin-bottom: 2rem;
+}
+#homePage .menus h2 {
+  margin-bottom: 2rem;
+}
+#homePage .menus .menus__cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1000px) {
+  #homePage .menus .menus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#homePage .menus .menus__cards .new {
+  position: relative;
+}
+#homePage .menus .menus__cards .new:before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+#homePage .menus .card__image {
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  background: white;
+  background-size: cover;
+}
+#homePage .menus .card__image-1 {
+  background-image: url("../assets/menu-1.jpg");
+}
+#homePage .menus .card__image-2 {
+  background-image: url("../assets/menu-2.jpg");
+}
+#homePage .menus .card__image-3 {
+  background-image: url("../assets/menu-3.jpg");
+}
+#homePage .menus .card__image-4 {
+  background-image: url("../assets/menu-4.jpg");
+}
+#homePage .menus .card__description {
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+  position: relative;
+}
+#homePage .menus .card__description::before {
+  display: inline-block;
+  text-rendering: auto;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+#homePage .menus .card__description::after {
+  display: inline-block;
+  text-rendering: auto;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+#homePage .menus .card__description:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+#homePage .menus .card__description h3, #homePage .menus .card__description p {
+  padding-top: 0.3rem;
+}
+
+footer {
+  background: #353535;
+  padding: 0 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", cursive;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
+}
+
+#page_recto .banner img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: 100% 65%;
+}
+#page_recto .recto__title {
+  margin-top: -2rem;
+}
+#page_recto .recto__title h2 {
+  font-family: "shrikhand", cursive;
+  padding: 2rem;
+  position: relative;
+  border-radius: 2rem 2rem 0 0;
+  background: #f6f6f6;
+}
+#page_recto .recto__title h2::before {
+  display: inline-block;
+  text-rendering: auto;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+#page_recto .recto__title h2::after {
+  display: inline-block;
+  text-rendering: auto;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+#page_recto .recto__title h2:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+#page_recto .recto__main {
+  padding: 0 2rem;
+  background: #f6f6f6;
+}
+#page_recto .menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1000px) {
+  #page_recto .menus {
+    grid-template-columns: 1fr;
+  }
+}
+#page_recto .menus .menus__category {
+  background: white;
+}
+#page_recto .menus .menus__category .menu-item {
+  display: flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-shadow: 2px 1px 8px -3px #000;
+  filter: box-shadow 30px 2px 2px #7e7e7e;
+}
+#page_recto .menus .menus__category .menu-item .menu-item__price {
+  margin-left: auto;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+#page_recto .menus .menus__category .menu-item .menu-item__description {
+  padding: 1rem;
+}
+#page_recto .menus .menus__category .menu-item .menu-item__check {
+  display: grid;
+  place-items: center;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #99e2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+#page_recto .menus .menus__category .menu-item .menu-item__check i {
+  display: grid;
+  place-items: center;
+  background: white;
+  width: 2rem;
+  border-radius: 1rem;
+  aspect-ratio: 1;
+  color: #99e2d0;
+}
+#page_recto .menus .menus__category .menu-item:hover .menu-item__check {
+  margin-right: 0;
+}
+#page_recto .menus .menus__category .menu-item:hover i {
+  animation: quarter-spin 0.5s ease-in-out;
+}
+@keyframes quarter-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

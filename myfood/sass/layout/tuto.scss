@@ -1,0 +1,50 @@
+@use "../utils/mixin.scss";
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+
+.tuto {
+    counter-reset: steps;
+    margin-bottom: 2rem;
+    & h2 {
+        margin-bottom: 1rem;
+    }
+    & ol {
+        display: flex;
+        gap: 2 * variables.$tuto-bullet-hight;
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
+    & li {
+        position: relative;
+        &::before{
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            display: grid;
+            background: colors.$purple;
+            position: absolute;
+            place-items: center;
+            width: 2 * variables.$tuto-bullet-hight;
+            height: 2 * variables.$tuto-bullet-hight;
+            border-radius: 50%;
+            bottom: 50%;
+            left: -1 * variables.$tuto-bullet-hight;
+            transform: translateY(50%);
+        }
+        background-color: #f6f6f6;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        list-style-type: none;
+        flex-grow: 1;
+        @include mixin.base-shadow;
+        &:hover {
+            @include mixin.zoom;
+        }
+        & i.fas {
+            margin-right: 1rem;
+            color: colors.$lightgrey;
+            font-size: 1.5rem;
+        }
+    }
+}

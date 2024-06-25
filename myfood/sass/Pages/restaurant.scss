@@ -1,0 +1,92 @@
+@use '../utils/mixin.scss';
+@use '../utils/variables.scss';
+@use '../utils/colors.scss';
+@use "../utils/animations.scss";
+
+#page_recto {
+    .banner img {
+        width: 100%;
+    
+        height: 70vh;
+        object-fit: cover;
+        object-position: 100% 65%;
+    
+    }
+    
+    .recto__title {
+        margin-top: -2rem;
+        h2 {
+            font-family: 'shrikhand', cursive;
+            padding: 2rem;
+            @include mixin.heart-animated;
+            border-radius: 2rem 2rem 0 0;
+            background: colors.$lightergrey;
+            
+        }
+    }
+    
+    .recto__main {
+        padding: 0 2rem;
+        background: colors.$lightergrey;
+    }
+
+    .menus {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        @media(max-width: variables.$breakpoint) {
+            grid-template-columns: 1fr;
+        }
+        .menus__category {
+            background: white; 
+            .menu-item {
+                display: flex;
+                overflow: hidden;
+                border-radius: 1rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include mixin.base-shadow;
+                filter: box-shadow 30px 2px 2px colors.$lightgrey;
+                .menu-item__price { 
+                    margin-left: auto;
+                    font-weight: 900;
+                    display: flex;
+                    align-items: flex-end; 
+                    padding: 1rem;
+                }
+                .menu-item__description {
+                    padding: 1rem;
+                }
+                .menu-item__check {
+                    display: grid;
+                    place-items: center;
+                    border-radius: 0 1rem 1rem 0;
+                    $button-width: 4rem;
+                    background-color: colors.$color-tertiary;
+                    margin-right: -$button-width;
+                    width: $button-width;
+                    transition: margin-right 0.5s;
+                    i {
+                        display: grid;
+                        place-items: center;
+                        background: white;
+                        width: 2rem;
+                        border-radius: 1rem;
+                        aspect-ratio: 1;
+                        color: colors.$color-tertiary;
+
+                    }
+                }
+                &:hover {
+                    .menu-item__check {   
+                        margin-right: 0;
+                    }
+                    i {
+                        @include animations.quarter-spin;
+                        animation:  quarter-spin 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

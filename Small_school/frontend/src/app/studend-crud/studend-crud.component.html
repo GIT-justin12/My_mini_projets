@@ -1,0 +1,44 @@
+<div class="container mt-4">
+    <div class="card p-4 mb-5">
+        <h1>Student Resignation</h1>
+        <form>
+            <div class="form-group mb-3">
+              <label>Student name</label>
+              <input type="text" [(ngModel)]="stname" [ngModelOptions]="{ standalone: true }" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+              <label>Course</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label>fee</label>
+                <input type="text" class="form-control">
+              </div>
+
+            <button type="submit" class="btn btn-success">Save</button>
+          </form>
+    </div>
+        <h1>Student Table</h1>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">fee</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>do</td>
+                <td>do</td>
+            </tr>
+            
+
+            </tbody>
+        </table>
+</div>

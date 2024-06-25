@@ -1,23 +1,14 @@
 {
   "name": "myfood",
   "version": "1.0.0",
-  "description": "OhMyFood: third project of openclassroom.",
+  "description": "Projet 3 d'openclassroom",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch style.scss style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GIT-justin12/My_mini_projets.git"
+    "sass": "sass --watch ./sass/style.scss ./css/style.css"
   },
   "author": "Justin K. AGBOZO",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GIT-justin12/My_mini_projets/issues"
-  },
-  "homepage": "https://github.com/GIT-justin12/My_mini_projets#readme",
   "devDependencies": {
-    "sass": "^1.66.1"
+    "sass": "^1.74.1"
   }
 }

@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <title>Register & login</title>
+    </head>
+    <body>
+         <div class="container" id="signUp" style="display: none;">
+            <h1 class="form-title">Register</h1>
+            <form action="post" action="">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="fName" id="fName" placeholder="First Name">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="lName" id="lName" placeholder="Last Name">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" name="emai" id="email" placeholder="Email" required>
+                    <label for="lname">Email</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <label for="lname">Password</label>
+                </div>
+                <input type="submit" class="btn" name="signUp" value="Sign up">
+            </form>
+            <p class="or">
+                ---------or---------
+            </p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="links">
+                <p>Already have account?</p>
+                <button id="signInButton">Sign in</button>
+            </div>
+        </div>
+
+        <div class="container" id="signIn">
+            <h1 class="form-title">Sign in</h1>
+            <form action="post" action="">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" name="email" id="email" placeholder="Email" >
+                    <label for="lname">Email</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <label for="lname">Password</label>
+                </div>
+                <p class="recover">
+                    <a href="">Recover password</a>
+                </p>
+                <input type="submit" class="btn" name="signIn" value="Sign in">
+            </form>
+            <p class="or">
+                ---------or---------
+            </p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="links">
+                <p>Already have account?</p>
+                <button id="signUpButton">Sign up</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html> 

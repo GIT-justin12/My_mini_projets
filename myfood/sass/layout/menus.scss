@@ -1,0 +1,58 @@
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+@use "../utils/mixin.scss";
+
+#homePage {
+    .menus {
+        background: #f6f6f6;
+        margin-bottom: 2rem;
+        h2 {
+            margin-bottom: 2rem;
+        }
+        .menus__cards {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            @media (max-width: variables.$breakpoint) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .new {
+                position: relative;
+            }
+            .new:before {
+                content: "Nouveau";
+                position: absolute;
+                height: 2rem;
+                width: 5rem;
+                background-color: colors.$color-tertiary;
+                color: darken(colors.$color-tertiary, 50%);
+                display: grid;
+                place-items: center;
+                right: 1rem;
+                top: 1rem;
+    
+            }
+        }
+        .card {
+            &__image {
+                height: 15rem;
+                border-radius: 1rem 1rem 0 0;
+                background: white;
+                background-size: cover;
+            }
+            @for $i from 1 through 4 {
+                &__image-#{$i} {
+                    background-image: url("../assets/menu-#{$i}.jpg");
+                }
+            }
+            &__description {
+                background-color: white;
+                border-radius: 0 0 1rem 1rem;
+                @include mixin.heart-animated;
+                h3, p {
+                    padding-top: 0.3rem;
+                }
+            }
+        }
+    }  
+}
