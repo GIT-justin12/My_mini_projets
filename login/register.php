@@ -31,7 +31,7 @@
                     <input class="btn" type="submit" name="submit" value="Login" autocomplete="off" required>
                 </div>
                 <div class="link">
-                    Already a member ? <a href="index.html">Sign in</a>
+                    Already a member ? <a href="index.php">Sign in</a>
                 </div>
             </form>
         </div>

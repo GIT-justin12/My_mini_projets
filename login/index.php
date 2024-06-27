@@ -17,13 +17,13 @@
                 </div>
                 <div class="field input">
                     <label for="password">Password</label>
-                    <input type="text" name="password" id="password" required>
+                    <input type="text" name="password" id="password" autocomplete="off" required>
                 </div>
                 <div class=" field">
                     <input class="btn" type="submit" name="submit" value="Login" required>
                 </div>
                 <div class="link">
-                    Don't have an account <a href="register.html">Sign up</a>
+                    Don't have an account <a href="register.php">Sign up</a>
                 </div>
             </form>
         </div>
