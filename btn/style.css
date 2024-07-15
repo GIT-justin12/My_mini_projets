@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    margin: 0;
+}
+.meomorph-btn{
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    box-shadow: 7px 7px 15px #bebebe, -7px -7px 15px #ffffff;
+    color: #006c97;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.1s ease;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    margin: 0 10px;
+}
+.meomorph-btn:hover{
+    box-shadow: inset 7px 7px 15px #bebebe, inset -7px -7px 15px #ffffff;
+}
+.meomorph-btn:active{
+    box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+    color: #b45a5a;
+}
