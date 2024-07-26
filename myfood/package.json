@@ -4,11 +4,16 @@
   "description": "Projet 3 d'openclassroom",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss ./css/style.css"
+    "sass": "sass --watch ./sass/style.scss ./css/style.css",
+    "build": "postcss ./css/style.css -u autoprefixer cssnano -o ./build/style.min.css"
   },
   "author": "Justin K. AGBOZO",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.4",
+    "postcss": "^8.4.39",
+    "postcss-cli": "^11.0.0",
     "sass": "^1.74.1"
   }
 }

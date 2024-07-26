@@ -17,6 +17,8 @@
     }
     & li {
         position: relative;
+        display: flex;
+        align-items: center;
         &::before{
             content: counter(steps);
             counter-increment: steps;
@@ -28,9 +30,9 @@
             width: 2 * variables.$tuto-bullet-hight;
             height: 2 * variables.$tuto-bullet-hight;
             border-radius: 50%;
-            bottom: 50%;
+            top: 50%;
             left: -1 * variables.$tuto-bullet-hight;
-            transform: translateY(50%);
+            transform: translateY(-50%);
         }
         background-color: #f6f6f6;
         padding: 1.5rem 2rem;
@@ -40,6 +42,10 @@
         @include mixin.base-shadow;
         &:hover {
             @include mixin.zoom;
+            background-color: lighten(colors.$purple, 35%);
+            i.fas{
+                color: colors.$purple;
+            }
         }
         & i.fas {
             margin-right: 1rem;

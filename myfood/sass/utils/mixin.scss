@@ -1,23 +1,30 @@
+@use "./colors";
+
 @mixin base-shadow {
-    box-shadow: 2px 1px 8px -3px #000;
+    box-shadow: 2px 1px 8px -3px colors.$lightgrey;
 }
 
-@mixin zoom {
-    transform: scale(1.02);
+@mixin zoom($zoom-level: 1.02, $transformation: null) {
+    transform: $transformation scale($zoom-level);
 }
 
 @mixin gradient($opacity: 0.9) {
     background-image: linear-gradient(to top, rgba(147, 86, 220, $opacity), rgba(255, 121, 218, $opacity));
 }
 
-@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+@mixin font-awesome($font-weight: 400) {
     display: inline-block;
+    position: absolute;
     text-rendering: auto;
     font-style: normal;
     font-variant: normal;
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 5 Free";
     font-weight: $font-weight;
+}
+
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+    @include font-awesome($font-weight);
     content: '\f004';
     font-size: 2rem;
     position: absolute;
@@ -44,6 +51,24 @@
     &:hover::after {
         opacity: 1;
         transform: translateY(-50%) scale(1.1);
+    }
+}
+
+@mixin base-button {
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    @include base-shadow;
+    @include gradient;
+    transition: transform 200ms;
+    margin-top: 2rem;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
     }
 }
 

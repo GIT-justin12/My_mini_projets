@@ -4,12 +4,25 @@
 @use "../utils/animations.scss";
 
 #page_recto {
+    header {
+        &:hover::before {
+            @include mixin.zoom(1.20, translateY(-50%));
+        }
+        &::before {
+            @include mixin.font-awesome($font-weight: 900);
+            content: '\f060';
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            transition: transform 200ms;
+        }
+    }
     .banner img {
         width: 100%;
-    
         height: 70vh;
         object-fit: cover;
-        object-position: 100% 65%;
+        object-position: center;
     
     }
     
@@ -37,16 +50,39 @@
         @media(max-width: variables.$breakpoint) {
             grid-template-columns: 1fr;
         }
-        .menus__category {
-            background: white; 
+        h3 {
+            text-transform: uppercase;
+            position: relative;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            &::after{
+                content: "";
+                position: absolute;
+                height: 0.25rem;
+                width: 3rem;
+                top: 1.5rem;
+                left: 0;
+                background-color: colors.$color-tertiary  ;
+            }
+        }
+        .menus__category { 
+            overflow: hidden;
             .menu-item {
+                $numberOfItems: 3;
+                @for $i from 1 through $numberOfItems {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 100ms * $i;
+                    }
+                }
+                background: white;
                 display: flex;
-                overflow: hidden;
+                margin: .5rem;
                 border-radius: 1rem;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                overflow: hidden;
                 @include mixin.base-shadow;
-                filter: box-shadow 30px 2px 2px colors.$lightgrey;
+                animation: appear 1s;
+                animation-fill-mode: both;
+                //filter: box-shadow 30px 2px 2px colors.$lightgrey;
                 .menu-item__price { 
                     margin-left: auto;
                     font-weight: 900;
@@ -56,10 +92,17 @@
                 }
                 .menu-item__description {
                     padding: 1rem;
+                    overflow: hidden;
+                    h4, p {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
                 }
                 .menu-item__check {
                     display: grid;
                     place-items: center;
+                    flex-shrink: 0 ;
                     border-radius: 0 1rem 1rem 0;
                     $button-width: 4rem;
                     background-color: colors.$color-tertiary;
@@ -71,13 +114,14 @@
                         place-items: center;
                         background: white;
                         width: 2rem;
+                        height: 2rem;
                         border-radius: 1rem;
-                        aspect-ratio: 1;
                         color: colors.$color-tertiary;
 
                     }
                 }
                 &:hover {
+                    cursor: pointer;
                     .menu-item__check {   
                         margin-right: 0;
                     }
@@ -87,6 +131,14 @@
                     }
                 }
             }
+        }
+    }
+    section.order {
+        height: 25vh;
+        display: grid;
+        place-items: center;
+        button {
+            @include mixin.base-button;
         }
     }
 }
